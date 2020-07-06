@@ -54,3 +54,42 @@ function forja_scripts() {
 	wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/index_slide.js', true );
 }
 add_action( 'wp_enqueue_scripts', 'forja_scripts' );
+
+/**
+ * Obtiene las imagenes de una galeria en pagina especifica
+ */
+
+function get_index_gallery_image_urls( $post_id, $number = false ) {
+
+    $post = get_post($post_id);
+
+	$xml = new SimpleXMLElement($post->post_content);
+	$resultado = $xml->xpath('/figure/ul/li');
+
+	$retorno = array();
+
+	foreach($resultado as $imagen){
+		array_push($retorno, $imagen->figure->img[0]->attributes()->src[0]);
+	}
+	
+	return $retorno;
+}
+
+function get_index_gallery_image_names( $post_id, $number = false ) {
+
+    $post = get_post($post_id);
+
+	$xml = new SimpleXMLElement($post->post_content);
+	$resultado = $xml->xpath('/figure/ul/li');
+
+	$retorno = array();
+
+	foreach($resultado as $imagen){
+		$id = explode("-",$imagen->figure->img[0]->attributes()->class);
+		array_push($retorno, get_the_title($id[2]));
+	}
+	
+	return $retorno;
+}
+
+// ------------------------------------------------------------------------------------------------------------------------  Pruebas

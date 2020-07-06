@@ -9,6 +9,7 @@ get_header();
 ?>
 
 <?php
+get_template_part( 'template-parts/content', 'header_index' );
 get_template_part( 'template-parts/content', 'index_cartelera' );
 get_template_part( 'template-parts/content', 'index_novedades' );
 get_template_part( 'template-parts/content', 'index_about' );

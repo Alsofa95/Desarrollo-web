@@ -344,6 +344,10 @@ body {
     min-height: 160px;
   }
 
+  img.img-post {
+    max-width: -webkit-fill-available;
+  }
+
 
 /* Bootstrap 4 colors*/
 .bg-dark {

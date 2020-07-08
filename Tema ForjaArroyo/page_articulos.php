@@ -11,9 +11,11 @@ get_header();
 get_template_part( 'template-parts/content', 'header_generic' );
 ?>
 
-<div class="container">
+<div class="content container">
+   
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8" id="content_articulo">
+            <!-- <h2 class="text-center">- Entradas recientes -</h2> -->
             <?php
 
             $args = array(
@@ -34,9 +36,14 @@ get_template_part( 'template-parts/content', 'header_generic' );
             ?>
         </div>
 
-        <div class="col-md-4">
-            <h2>Columna sidebar</h2>
+        <div class="col-md-4 bg-grey shadow-lg" id="content_sidebar">
             <?php get_sidebar(); ?>
         </div>
     </div><!-- #row -->
 </div> <!-- #Container -->
+
+
+<?php
+get_footer();
+
+?>

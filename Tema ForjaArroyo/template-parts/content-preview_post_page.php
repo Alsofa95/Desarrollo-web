@@ -48,8 +48,9 @@
                 </h6>
             </span>
         </div>  
-        <p><?php echo get_excerpt( 300 )?>...</p>                          			
-        <a href="<?php echo esc_url( get_permalink()); ?>" class="button button-style button-anim fab fa-readme"><span>Leer mas</span></a>
+        <p><?php echo get_excerpt( 300 )?>... 
+        <a href="<?php echo esc_url( get_permalink()); ?>" class="boton_articulo"><h4>- Leer articulo -</h4></a></p>                          			
+        
     </div>
 
 </div>

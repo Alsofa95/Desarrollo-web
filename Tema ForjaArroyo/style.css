@@ -55,11 +55,12 @@ body {
   }
   
   a{
-    color:rgb(146, 146, 146);
+    color:rgb(51, 51, 51);
   }
 
+
   a:hover{
-    color:rgb(240, 240, 240);
+    color:rgb(155, 155, 155);
     text-decoration: none;
   }
   
@@ -348,6 +349,26 @@ body {
     max-width: -webkit-fill-available;
   }
 
+  /* Pagina articulos */
+  .content.container {
+    margin-top: 5%;
+    margin-bottom: 15%;
+  }
+
+  .blog-post {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    border-bottom: 2px dashed rgb(114, 114, 114);
+  }
+
+  h2.widget-title {
+    border-bottom: 1px solid;
+    width: 75%;
+  }
+
+  ul {
+    list-style-type: unset;
+  }
 
 /* Bootstrap 4 colors*/
 .bg-dark {
@@ -356,4 +377,56 @@ body {
 
 .text-white {
   color: #fff!important;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.w-25 {
+  width: 25% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
+.h-25 {
+  height: 25% !important;
+}
+
+.h-50 {
+  height: 50% !important;
+}
+
+.h-75 {
+  height: 75% !important;
+}
+
+.h-100 {
+  height: 100% !important;
 }

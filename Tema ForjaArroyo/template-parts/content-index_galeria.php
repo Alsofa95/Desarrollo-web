@@ -16,6 +16,8 @@
 
 <br id="galeria">
 <div class="container gallery text-center">
+    <h2>- Algunos Trabajos en Forja -</h2>
+    <h4>Descubra la gran variedad de trabajos en forja artesanal que le ofrecemos</h4>
 
   <?php 
     foreach($imagenes as $imagen){

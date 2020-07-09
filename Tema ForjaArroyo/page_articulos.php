@@ -14,7 +14,7 @@ get_template_part( 'template-parts/content', 'header_generic' );
 <div class="content container">
    
     <div class="row">
-        <div class="col-md-8 shadow" id="content_articulo">
+        <div class="col-md-8 shadow-lg" id="content_articulo">
             <!-- <h2 class="text-center">- Entradas recientes -</h2> -->
             <?php
 
@@ -48,16 +48,18 @@ get_template_part( 'template-parts/content', 'header_generic' );
                         'end_size'     => 2,
                         'mid_size'     => 1,
                         'prev_next'    => true,
-                        'prev_text'    => sprintf( '<h4 class="text-right"> %1$s </h4>', __( 'Artículos recientes', 'text-domain' ) ),
-                        'next_text'    => sprintf( '<h4 class="text-left"> %1$s </h4>', __( 'Artículos anteriores', 'text-domain' ) ),
+                        'prev_text'    => sprintf( '<strong class="pagination_next"> %1$s </strong>', __( 'Artículos recientes', 'text-domain' ) ),
+                        'next_text'    => sprintf( '<strong class="pagination_prev"> %1$s </strong>', __( 'Artículos anteriores', 'text-domain' ) ),
                         'add_args'     => false,
                         'add_fragment' => '',
+                        'before_page_number' => '<strong> ',
+                        'after_page_number' => '</strong>',
                     ) );
                 ?>
             </div>
         </div>
 
-        <div class="col-md-3 bg-grey shadow-lg" id="content_sidebar">
+        <div class="col-md-3 shadow-lg" id="content_sidebar">
             <?php get_sidebar(); ?>
         </div>
     </div><!-- #row -->

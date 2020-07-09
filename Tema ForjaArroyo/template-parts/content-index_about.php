@@ -56,7 +56,7 @@
             
 
             <div class="col-sm-12 text-center">
-              <a href="#" class="btn btn-grey btn-lg active" role="button" aria-pressed="true">Leer mas sobre nuestra empresa</a>
+              <a href="#" class="button_anim" role="button" aria-pressed="true">Leer mas sobre nuestra empresa</a>
             </div>
 
         </div>

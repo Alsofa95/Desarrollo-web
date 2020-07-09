@@ -19,8 +19,8 @@
 
   <?php 
     foreach($imagenes as $imagen){
-      echo "<div class='mySlides shadow-lg'>";
-      echo "  <img src='".$imagen."' style=width:80%>";
+      echo "<div class='mySlides'>";
+      echo "  <img class='shadow-lg' src='".$imagen."' style=width:75%>";
       echo "</div>";
     }
   ?>
@@ -44,5 +44,5 @@
   </div> 
 
   <br>
-  <a href="#" class="btn btn-grey btn-lg active" role="button" aria-pressed="true">Ver la galeria completa</a>
+  <a href="#" class="button_anim" role="button" aria-pressed="true">Ver la galeria completa</a>
 </div>

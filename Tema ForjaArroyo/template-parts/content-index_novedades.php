@@ -29,7 +29,7 @@
       <?php endif; ?>
       
     </div>
-    <a href="#" class="btn btn-grey btn-lg active" role="button" aria-pressed="true">Ver todas las entradas</a>
+    <a href="javascript:window.open('<?php echo get_home_url(); ?>/articulos/')" class="btn btn-grey btn-lg active" role="button" aria-pressed="true">Ver todas las entradas</a>
 
     </div><br > <!-- #Container-->  
 </div>

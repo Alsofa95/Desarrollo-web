@@ -19,7 +19,7 @@
 
   <?php 
     foreach($imagenes as $imagen){
-      echo "<div class='mySlides'>";
+      echo "<div class='mySlides shadow-lg'>";
       echo "  <img src='".$imagen."' style=width:80%>";
       echo "</div>";
     }
@@ -33,7 +33,7 @@
 
     <?php 
       $contador = 1;
-     for($i=0; $i <= $count ; $i++){
+     for($i=0; $i < $count ; $i++){
         echo "<div class='col-xs-4 col-sm-2'>";
         echo "  <img class='demo cursor' src='".$imagenes[$i]."' style='width:100%' onclick='currentSlide(".$contador.")' alt='".$nombres[$i]."'>";
         echo "</div>";

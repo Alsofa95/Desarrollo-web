@@ -5,7 +5,7 @@
     <div class="col-md-12 blog-post">
         <div class="post-image">
             <a href="<?php echo esc_url( get_permalink()); ?>">
-                <img class="img-post" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">   
+                <img class="img-post shadow" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">   
             </a>                                    
         </div> 
         <div class="post-title">

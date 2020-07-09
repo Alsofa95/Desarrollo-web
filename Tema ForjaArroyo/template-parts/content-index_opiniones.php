@@ -13,7 +13,7 @@
 
     <!-- Columna OPINIONES 1 -->
     <div class="col-sm-6 col-opinion">
-      <div class="contenedor-opinion">
+      <div class="contenedor-opinion shadow">
         <a href="#"><h2 class="title-opinion"><i class="fab fa-google-plus"></i> Google</h2></a>
         <div id="carrouselOpiniones1" class="carousel slide text-center" data-ride="carousel">
           <!-- Indicators -->
@@ -53,7 +53,7 @@
 
     <!-- Columna OPINIONES 2 -->
     <div class="col-sm-6 col-opinion">
-      <div class="contenedor-opinion">
+      <div class="contenedor-opinion shadow">
         <a href="#"><h2 class="title-opinion"><i class="fab fa-facebook"></i> Facebook</h2></a>
         <div id="carrouselOpiniones2" class="carousel slide text-center" data-ride="carousel">
           <!-- Indicators -->

@@ -160,3 +160,52 @@ function get_excerpt( $count ) {
 	
 	return $excerpt;
 }
+
+//PAGINACION de post
+if ( ! function_exists( 'custom_paging_nav' ) ) :
+	
+	function custom_paging_nav() {
+		
+		if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+			return;
+		}
+	
+		$paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+		$pagenum_link = html_entity_decode( get_pagenum_link() );
+		$query_args   = array();
+		$url_parts    = explode( '?', $pagenum_link );
+	
+		if ( isset( $url_parts[1] ) ) {
+			wp_parse_str( $url_parts[1], $query_args );
+		}
+	
+		$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+		$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+	
+		$format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+		$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+	
+		$links = paginate_links( array(
+			'base'     => $pagenum_link,
+			'format'   => $format,
+			'total'    => $GLOBALS['wp_query']->max_num_pages,
+			'current'  => $paged,
+			'mid_size' => 3,
+			'add_args' => array_map( 'urlencode', $query_args ),
+			'prev_text' => 'Entradas nuevas',
+			'next_text' => 'Entradas anteriores',
+			'type'      => 'list',
+		) );
+	
+		if ( $links ) :
+	
+		?>
+			<div class="col-12 p-0">
+				<nav class="navigation paging-navigation" >
+						<?php echo $links; ?>
+				</nav><!-- #navigation -->
+			</div>
+		<?php
+		endif;
+	}
+	endif;

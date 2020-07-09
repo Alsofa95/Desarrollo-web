@@ -347,6 +347,7 @@ body {
 
   img.img-post {
     max-width: -webkit-fill-available;
+    border: 1px solid rgb(197, 197, 197);
   }
 
   /* Pagina articulos */
@@ -368,6 +369,16 @@ body {
 
   ul {
     list-style-type: unset;
+  }
+
+  div#content_articulo {
+    background: white;
+    padding-top: 2%;
+    margin-right: 3%;
+  }
+  
+  div#content_sidebar {
+    padding-bottom: 5%;
   }
 
 /* Bootstrap 4 colors*/

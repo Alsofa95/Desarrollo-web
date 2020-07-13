@@ -264,7 +264,7 @@ body {
     }
   }
 
-  /* Galeria */
+  /* GALERIA */
   .mySlides {
     margin-bottom: 3%;
   }
@@ -307,7 +307,7 @@ body {
 
   .gallery {
     margin-top: 5rem;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
   }
 
   .btn-grey{
@@ -334,8 +334,8 @@ body {
     margin-top: 60px;
   }
 
-  div#contact {
-    margin-top: 30px;
+  div#content_opiniones {
+    padding-bottom: 10rem;
   }
 
   .contact-map {
@@ -382,13 +382,14 @@ body {
     list-style-type: unset;
   }
 
-  div#content_articulo {
-    padding-top: 2%;
-    margin-right: 3%;
+  .container_articulo {
+    padding-top: 3rem;
+    margin-right: 2%;
+    margin-left: 2%;
   }
   
   div#content_sidebar {
-    padding-bottom: 5%;
+    padding-bottom: 2rem;
   }
 
   strong.pagination_text {
@@ -408,6 +409,31 @@ body {
     float: right;
   }
 
+  /* SIDEBAR */
+
+  span.screen-reader-text {
+    display: none;
+  }
+
+  input.search-field {
+    padding: .7rem;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+  }
+
+  input.search-submit {
+    display: none;
+  }
+
+  /* FOOTER */
+
+  a.footer_link {
+    color: whitesmoke;
+  }
+
+  a.footer_link:hover {
+    color: rgb(143, 143, 143);
+}
 /* Bootstrap 4 colors*/
 .bg-dark {
   background-color: #343a40!important;
@@ -416,6 +442,11 @@ body {
 .bg-grey {
   /* background-color: #f6f6f6; */
   background-color: #f1f1f1;
+}
+
+.bg-more_grey {
+  /* background-color: #f6f6f6; */
+  background-color: #e6e4e4;
 }
 
 .text-white {
@@ -488,6 +519,7 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  margin-top: 5rem;
 }
 .button_anim:after {
   content: '';

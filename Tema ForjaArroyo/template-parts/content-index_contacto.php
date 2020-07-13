@@ -8,7 +8,7 @@
 
 
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<div id="contact" class="container-fluid bg-more_grey">
     <div class="container">
         <h2 class="text-center">- CONTÁCTANOS -</h2>
         <div class="row">

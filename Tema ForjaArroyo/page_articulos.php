@@ -14,7 +14,7 @@ get_template_part( 'template-parts/content', 'header_generic' );
 <div class="content container">
    
     <div class="row">
-        <div class="col-md-8 shadow-lg" id="content_articulo">
+        <div class="col-md-8 shadow-lg container_articulo">
             <!-- <h2 class="text-center">- Entradas recientes -</h2> -->
             <?php
 
@@ -59,7 +59,7 @@ get_template_part( 'template-parts/content', 'header_generic' );
             </div>
         </div>
 
-        <div class="col-md-3 shadow-lg" id="content_sidebar">
+        <div class="col-md-3 shadow-lg container_articulo" id="content_sidebar">
             <?php get_sidebar(); ?>
         </div>
     </div><!-- #row -->

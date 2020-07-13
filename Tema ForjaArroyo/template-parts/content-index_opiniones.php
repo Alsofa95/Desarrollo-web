@@ -5,8 +5,8 @@
  * @package ForjaArroyo
  */
 ?>
-
-<div id="opiniones" class="container text-center">
+<div class="bg-grey" id="content_opiniones">
+<div class="container text-center">
     <h2>- ¿QUÉ OPINAN NUESTROS CLIENTES? -</h2>
     <h4>Recuerda que puedes seguirnos en Facebook y dejarnos algun comentario.</h4>
     <div class="row">
@@ -93,3 +93,4 @@
     </div>
 
 </div>
+</div> <!-- #Content_opiniones -->

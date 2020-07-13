@@ -11,7 +11,7 @@
   <div class="container">
     <h2>- NOVEDADES -</h2>
     <h4>Enterate de todas nuestras novedades, trabajos en curso y de todos nuestros proyectos futuros.</h4>
-    <div class="row text-center">
+    <div class="row text-center" id="content_novedades">
 
       <?php
         if ( have_posts() ) :

@@ -186,7 +186,7 @@ body {
   .navbar {
     margin-bottom: 0;
     background-color: #0c0c0c;
-    z-index: 9999;
+    z-index: 1500;
     border: 0;
     font-size: 12px !important;
     line-height: 1.42857143 !important;
@@ -423,6 +423,13 @@ body {
 
   input.search-submit {
     display: none;
+  }
+  /* GALERIA */
+
+  div#gallery {
+    min-height: 947px;
+    margin: 3rem;
+    margin-top: 5rem;
   }
 
   /* FOOTER */

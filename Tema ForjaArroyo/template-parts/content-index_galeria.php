@@ -46,5 +46,5 @@
   </div> 
 
   <br>
-  <a href="#" class="button_anim" role="button" aria-pressed="true">Ver la galeria completa</a>
+  <a href="<?php echo get_home_url(); ?>/galeria/" class="button_anim" role="button" aria-pressed="true">Ver la galeria completa</a>
 </div>

@@ -18,8 +18,8 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="javascript:window.open('<?php echo get_home_url(); ?>')">Pagina principal</a></li>
-        <li><a href="#">Retroceder</a></li>
+        <li><a href="<?php echo get_home_url(); ?>">Pagina principal</a></li>
+        <li><a href="javascript:history.back()">Retroceder</a></li>
       </ul>
     </div>
   </div>

@@ -137,7 +137,9 @@
   width: auto;
   height: auto;
   top: 0;
-  left: 0; }
+  left: 0; 
+  max-width: none;
+  object-fit: contain;}
 
 /*
 	stretched thumbnail or div placeholder element (see below)

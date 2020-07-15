@@ -15,7 +15,7 @@
 ?>
 
 <br id="galeria">
-<div class="container gallery text-center">
+<div class="container text-center" id="index_gallery">
     <h2>- Algunos Trabajos en Forja -</h2>
     <h4>Descubra la gran variedad de trabajos en forja artesanal que le ofrecemos</h4>
 

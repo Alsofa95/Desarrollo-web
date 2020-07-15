@@ -304,12 +304,6 @@ body {
     opacity: 1;
   }
 
-
-  .gallery {
-    margin-top: 5rem;
-    margin-bottom: 10rem;
-  }
-
   .btn-grey{
       background-color: grey;
       color: white;
@@ -333,6 +327,11 @@ body {
   div#opiniones {
     margin-top: 60px;
   }
+
+  #index_gallery {
+    padding-bottom: 7rem;
+    padding-top: 5rem;
+  } 
 
   div#content_opiniones {
     padding-bottom: 10rem;
@@ -395,6 +394,7 @@ body {
   strong.pagination_text {
     display: block;
     float: left;
+    
   }
 
   .pagination {
@@ -430,6 +430,18 @@ body {
     min-height: 947px;
     margin: 3rem;
     margin-top: 5rem;
+  }
+
+  div#option_gallery {
+    margin-top: 5rem;
+    padding-left: 2rem;
+  }
+
+  strong#title_options_cat {
+    padding: 2rem;
+    font-size: 2.3rem;
+    color: rgb(61, 61, 61);
+    background-color: rgb(247, 247, 247);
   }
 
   /* FOOTER */
@@ -510,6 +522,10 @@ body {
 
 .h-100 {
   height: 100% !important;
+}
+
+.clean_padding{
+  padding: 0;
 }
 
 /* Pruebas */

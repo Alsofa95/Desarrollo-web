@@ -24,14 +24,50 @@ get_header();
 get_template_part( 'template-parts/content', 'header_generic' );
 $imagenes = get_index_gallery_image_urls(42);
 $nombres = get_index_gallery_image_names(42);
+$leyendas = get_index_gallery_image_leyenda(42);
+
+
+
 $php_array = array();
+$php_array_names = array();
+$php_array_categories = array();
+$listado_categorias = array();
 
 foreach($imagenes as $imagen){
     array_push($php_array,strval($imagen[0]));
 }
+
+foreach($nombres as $nombre){
+    array_push($php_array_names,$nombre);
+}
+
+foreach($leyendas as $leyenda){
+    array_push($php_array_categories,$leyenda);
+    array_push($listado_categorias,$leyenda);
+}
+
+$listado_categorias = array_unique($listado_categorias);
 ?>
 
-<div class="shadow-lg bg-more_grey" id="gallery"></div> <!-- #Container -->
+<div class="row shadow">
+    <div class="col-md-2 col-sm-12 clean_padding">
+        <div id="option_gallery">
+            <div class="shadow-lg list-group text-center">
+                <strong id="title_options_cat" class='list-group-item list-group-item-action'>- Nuestros productos -</strong>
+                <?php
+                    foreach($listado_categorias as $categoria){
+                        echo "<a onclick='filtrar(this)' class='list-group-item list-group-item-action' role='button'><strong>".$categoria."</strong></a>";
+                    }
+                ?>
+                <a onclick='mostrarTodo()' class='list-group-item list-group-item-action' role='button'><strong>- Mostrar todo -</strong></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10 col-sm-12">
+        <div class="shadow-lg bg-more_grey" id="gallery"></div> <!-- #Container -->
+    </div>
+</div>
+
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="pswp__bg"></div>
@@ -68,9 +104,12 @@ foreach($imagenes as $imagen){
 </div>
 
 <script type="text/javascript">
+    var gallery;
+    var items = [];
+
     window.addEventListener('load', function() {
         var options = {
-            gap: 4,
+            gap: 2,
             rowsPerPage: 0,
             showLabels: 'hover',
             lightbox: true,
@@ -78,7 +117,7 @@ foreach($imagenes as $imagen){
             selectable: false,
             infiniteScrollOffset: 0 ,
             activable : true,
-            itemsPerRow: 6,
+            columnWidth: 400,
             photoSwipeOptions: {
                 escKey: true,
                 timeToIdle: 4000,
@@ -98,7 +137,7 @@ foreach($imagenes as $imagen){
         var elementRef = document.getElementById('gallery');
         var photoswipeRef = document.getElementsByClassName('pswp')[0];
 
-        var gallery = new NaturalGallery.Square(elementRef,options,photoswipeRef);
+        gallery = new NaturalGallery.Masonry(elementRef,options,photoswipeRef);
         gallery.init();
     
         gallery.addEventListener('zoom', function(ev) {
@@ -108,35 +147,55 @@ foreach($imagenes as $imagen){
         for (var i = 0; i < items.length; i++) {
             gallery.addItems(items[i]);
         }
-
     })
 
     /* ------------------- Array de items ----------------------------- */
     <?php
         $js_array = json_encode($php_array,JSON_UNESCAPED_SLASHES);
+        $js_array_names = json_encode($php_array_names,JSON_UNESCAPED_SLASHES);
+        $js_array_categories = json_encode($php_array_categories,JSON_UNESCAPED_SLASHES);
+
         echo "var imagenes = ". $js_array . ";\n";
+        echo "var names = ". $js_array_names . ";\n";
+        echo "var categorias = ". $js_array_categories . ";\n";
     ?>
    
-    var items = [];
+    
 
     for (var i = 0; i < imagenes.length; i++) {
         var item = [
         {
             thumbnailSrc: imagenes[i],
-            // thumbnailWidth: 400,
-            // thumbnailHeight: 300,
             enlargedSrc: imagenes[i],
             enlargedWidth: 1500,
             enlargedHeight: 900,
-            title: 'Image 123123', 
+            title: names[i], 
             linkTarget: '_blank', // _blank | _top | _self | _parent
             color: '#FF5733', // bg color
-            link : '#',
+            category : categorias[i],
         }
         ];
         items.push(item);
     }
 </script>
+
+<script>
+    function filtrar(categoria) {
+        gallery.clear();
+        for (var i = 0; i < items.length; i++) {
+            if(items[i][0].category == categoria.textContent){
+                gallery.addItems(items[i]);
+            } 
+        }
+    }
+    function mostrarTodo() {
+        gallery.clear();
+        for (var i = 0; i < items.length; i++) {
+            gallery.addItems(items[i]);
+        }
+    }
+</script>
+
 
 <?php
 get_footer();

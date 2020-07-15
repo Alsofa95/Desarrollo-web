@@ -147,6 +147,23 @@ function get_index_gallery_image_names( $post_id, $number = false ) {
 	return $retorno;
 }
 
+function get_index_gallery_image_leyenda( $post_id, $number = false ) {
+
+    $post = get_post($post_id);
+
+	$xml = new SimpleXMLElement($post->post_content);
+	$resultado = $xml->xpath('/figure/ul/li');
+
+	$retorno = array();
+
+	foreach($resultado as $imagen){
+		$id_imagen = ( $imagen->figure->img[0]->attributes());
+		array_push($retorno, wp_get_attachment_caption( $id_imagen[2] ));
+	}
+	
+	return $retorno;
+}
+
 // ------------------------------------------------------------------------------------------------------------------------  Pruebas
 
 //Limitar las entradillas

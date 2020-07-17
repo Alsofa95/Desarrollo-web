@@ -49,17 +49,20 @@ foreach($leyendas as $leyenda){
 $listado_categorias = array_unique($listado_categorias);
 ?>
 
-<div class="row shadow">
+<div class="row" id="contenedor_galeria">
     <div class="col-md-2 col-sm-12 clean_padding">
         <div id="option_gallery">
             <div class="shadow-lg list-group text-center">
                 <strong id="title_options_cat" class='list-group-item list-group-item-action'>- Nuestros productos -</strong>
+                <input type="email" oninput="buscador()" class="form-control list-group-item list-group-item-action" id="buscador_producto" placeholder="Introduce nombre del artículo">
+                <br>
+                <a onclick='mostrarTodo()' class='list-group-item list-group-item-action' role='button'><strong>Mostrar todo</strong></a>
                 <?php
                     foreach($listado_categorias as $categoria){
                         echo "<a onclick='filtrar(this)' class='list-group-item list-group-item-action' role='button'><strong>".$categoria."</strong></a>";
                     }
                 ?>
-                <a onclick='mostrarTodo()' class='list-group-item list-group-item-action' role='button'><strong>- Mostrar todo -</strong></a>
+                
             </div>
         </div>
     </div>
@@ -116,7 +119,7 @@ $listado_categorias = array_unique($listado_categorias);
             minRowsAtStart: 2,
             selectable: false,
             infiniteScrollOffset: 0 ,
-            activable : true,
+            activable : false,
             columnWidth: 400,
             photoSwipeOptions: {
                 escKey: true,
@@ -188,10 +191,22 @@ $listado_categorias = array_unique($listado_categorias);
             } 
         }
     }
+
     function mostrarTodo() {
         gallery.clear();
         for (var i = 0; i < items.length; i++) {
             gallery.addItems(items[i]);
+        }
+    }
+
+    function buscador(){
+        var busqueda = document.getElementById("buscador_producto").value;
+        gallery.clear();
+        for (var i = 0; i < items.length; i++) {
+            console.log(items[i]);
+            if(items[i][0].title.includes(busqueda)){
+                gallery.addItems(items[i]);
+            } 
         }
     }
 </script>

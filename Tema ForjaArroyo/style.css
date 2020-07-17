@@ -428,12 +428,11 @@ body {
 
   div#gallery {
     min-height: 947px;
-    margin: 3rem;
-    margin-top: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   div#option_gallery {
-    margin-top: 5rem;
     padding-left: 2rem;
   }
 
@@ -442,6 +441,18 @@ body {
     font-size: 2.3rem;
     color: rgb(61, 61, 61);
     background-color: rgb(247, 247, 247);
+  }
+
+  input#buscador_producto {
+    padding: 2rem;
+    display: inline;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  div#contenedor_galeria {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   /* FOOTER */

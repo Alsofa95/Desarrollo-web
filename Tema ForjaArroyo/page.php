@@ -2,37 +2,58 @@
 /**
  * The template for displaying all pages
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package ForjaArroyo
  */
-
 get_header();
+get_template_part( 'template-parts/content', 'header_generic' );
 ?>
 
-	<main id="primary" class="site-main">
+<div class="content container">
+   
+    <div class="row">
+        <div class="col-md-8 shadow-lg container_articulo">
+            <!-- <h2 class="text-center">- Entradas recientes -</h2> -->
+            <?php
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+			while ( have_posts() ) :
+				the_post();
+                get_template_part( 'template-parts/content-preview_post_page', get_post_type() );
+            endwhile;
+            ?>
 
-			get_template_part( 'template-parts/content', 'page' );
+            <div class="pagination text-center w-100">
+                <?php 
+                    echo paginate_links( array(
+                        'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+                        'total'        => 10,
+                        'current'      => max( 1, get_query_var( 'paged' ) ),
+                        'format'       => '?paged=%#%',
+                        'show_all'     => false,
+                        'type'         => 'plain',
+                        'end_size'     => 2,
+                        'mid_size'     => 1,
+                        'prev_next'    => true,
+                        'prev_text'    => sprintf( '<strong class="pagination_next"> %1$s </strong>', __( 'Artículos recientes', 'text-domain' ) ),
+                        'next_text'    => sprintf( '<strong class="pagination_prev"> %1$s </strong>', __( 'Artículos anteriores', 'text-domain' ) ),
+                        'add_args'     => false,
+                        'add_fragment' => '',
+                        'before_page_number' => '<strong> ',
+                        'after_page_number' => '</strong>',
+                    ) );
+                ?>
+            </div>
+        </div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+        <div class="col-md-3 shadow-lg container_articulo" id="content_sidebar">
+            <?php get_sidebar(); ?>
+        </div>
+    </div><!-- #row -->
+</div> <!-- #Container -->
 
-		endwhile; // End of the loop.
-		?>
 
-	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();
+
+?>

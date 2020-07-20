@@ -384,7 +384,7 @@ body {
   a.link_preview_post {
     background:rgb(94, 94, 94);
     color: white;
-    padding: 0.5rem;
+    padding: 0.5rem 2rem;
     margin: 0.1rem;
     border-radius: 1rem;
     float: right;

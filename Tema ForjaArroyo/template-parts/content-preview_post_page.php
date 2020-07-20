@@ -12,6 +12,7 @@
             <a href="<?php echo esc_url( get_permalink()); ?>"><h2><?php the_title();?></h2></a>
         </div>  
         <div class="post-info">
+
             <span>
                 <i class="far fa-calendar"></i> 
                 <?php echo the_time('j \d\e\ F, Y'); ?> / 
@@ -31,9 +32,18 @@
                 }
 
                 echo $full_name;
-                
                 ?>
-
+                
+                <?php
+                    $categories = get_the_category();
+                    
+                    if ( ! empty( $categories ) ) {
+                        for($i = 0 ; $i < sizeof($categories);$i++){
+                            echo '<a class="link_preview_post" href="' . esc_url( get_category_link( $categories[$i]->term_id ) ) . '">' . esc_html( $categories[$i]->name ) . '</a> ';	
+                        }
+                    }
+                ?> 
+                
                 <h6>
                     <?php 
                         $post_tags = get_the_tags();
@@ -50,6 +60,7 @@
         </div>  
         <p><?php echo get_excerpt( 300 )?>... 
         <a href="<?php echo esc_url( get_permalink()); ?>" class="boton_articulo"><h4>- Leer articulo -</h4></a></p>                          			
+        
         
     </div>
 

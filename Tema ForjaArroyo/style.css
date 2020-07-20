@@ -409,6 +409,20 @@ body {
     float: right;
   }
 
+  a.link_post {
+    padding: 1rem 2rem;
+    color: white;
+    background: rgb(94, 94, 94);
+    border-radius: 3rem;
+    display: inline-flex;
+    margin: 1px;
+    font-size: 1.5rem;
+  }
+
+  a.link_post:hover {
+    background: rgb(141, 141, 141);
+  }
+
   /* SIDEBAR */
 
   span.screen-reader-text {

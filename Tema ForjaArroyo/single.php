@@ -49,9 +49,9 @@ $categories="";
 					<h3>
 					<?php 
 						if ( ! empty( $categories ) ) {
-							for($i = 0 ; $i< sizeof($categories)-1;$i++){
+							for($i = 0 ; $i < sizeof($categories);$i++){
 								echo '<a class="link_post" href="' . esc_url( get_category_link( $categories[$i]->term_id ) ) . '">' . esc_html( $categories[$i]->name ) . '</a> ';	
-								if(sizeof($categories)-1 != $i+1) echo ' / ';
+								if(sizeof($categories) != $i+1) echo ' / ';
 							}
 							//print_r($categories);
 							

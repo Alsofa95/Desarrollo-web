@@ -69,6 +69,9 @@ body {
     text-decoration: none;
   }
   
+  iframe {
+    width: auto;
+  }
   .jumbotron {
     background-image: url(https://www.forjaarroyo.es/wp-content/uploads/2019/07/empresa-forjaarroyo.jpg);
     background-position: center center;

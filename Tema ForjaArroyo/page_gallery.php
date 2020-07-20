@@ -22,11 +22,12 @@ get_header();
 
 <?php
 get_template_part( 'template-parts/content', 'header_generic' );
-$imagenes = get_index_gallery_image_urls(42);
-$nombres = get_index_gallery_image_names(42);
-$leyendas = get_index_gallery_image_leyenda(42);
+$page = get_page_by_path( 'galeria' );
+$ID_Page = $page->ID;
 
-
+$imagenes = get_index_gallery_image_urls($ID_Page);
+$nombres = get_index_gallery_image_names($ID_Page);
+$leyendas = get_index_gallery_image_leyenda($ID_Page);
 
 $php_array = array();
 $php_array_names = array();

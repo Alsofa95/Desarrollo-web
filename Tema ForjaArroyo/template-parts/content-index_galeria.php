@@ -8,10 +8,15 @@
 
 <?php
   // Cambiar al identificador de la pagina
-  $imagenes = get_index_gallery_image_urls(33);
-  $nombres = get_index_gallery_image_names(33);
+  $page = get_page_by_path( 'galeria-portada' );
+  $ID_Page = $page->ID;
+
+  $imagenes = get_index_gallery_image_urls( $ID_Page);
+  $nombres = get_index_gallery_image_names( $ID_Page);
   $count = count($imagenes);
 
+  
+  
 ?>
 
 <br id="galeria">

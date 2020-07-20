@@ -33,16 +33,8 @@
 
                 echo $full_name;
                 ?>
+
                 
-                <?php
-                    $categories = get_the_category();
-                    
-                    if ( ! empty( $categories ) ) {
-                        for($i = 0 ; $i < sizeof($categories);$i++){
-                            echo '<a class="link_preview_post" href="' . esc_url( get_category_link( $categories[$i]->term_id ) ) . '">' . esc_html( $categories[$i]->name ) . '</a> ';	
-                        }
-                    }
-                ?> 
                 
                 <h6>
                     <?php 
@@ -59,9 +51,19 @@
             </span>
         </div>  
         <p><?php echo get_excerpt( 300 )?>... 
-        <a href="<?php echo esc_url( get_permalink()); ?>" class="boton_articulo"><h4>- Leer articulo -</h4></a></p>                          			
-        
+        <a href="<?php echo esc_url( get_permalink()); ?>" class="boton_articulo"><h4>- Leer articulo -</h4></a></p> 
+
+        <?php
+            $categories = get_the_category();
+            
+            if ( ! empty( $categories ) ) {
+                for($i = 0 ; $i < sizeof($categories);$i++){
+                    echo '<a class="link_preview_post" href="' . esc_url( get_category_link( $categories[$i]->term_id ) ) . '">' . esc_html( $categories[$i]->name ) . '</a> ';	
+                }
+            }
+        ?> 
         
     </div>
+    
 
 </div>

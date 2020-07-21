@@ -49,28 +49,37 @@ foreach($leyendas as $leyenda){
 
 $listado_categorias = array_unique($listado_categorias);
 ?>
-
-<div class="row" id="contenedor_galeria">
-    <div class="col-md-2 col-sm-12 clean_padding">
-        <div id="option_gallery">
-            <div class="shadow-lg list-group text-center">
-                <strong id="title_options_cat" class='list-group-item list-group-item-action'>- Nuestros productos -</strong>
-                <input type="email" oninput="buscador()" class="form-control list-group-item list-group-item-action" id="buscador_producto" placeholder="Introduce nombre del artículo">
-                <br>
-                <a onclick='mostrarTodo()' class='list-group-item list-group-item-action' role='button'><strong>Mostrar todo</strong></a>
-                <?php
-                    foreach($listado_categorias as $categoria){
-                        echo "<a onclick='filtrar(this)' class='list-group-item list-group-item-action' role='button'><strong>".$categoria."</strong></a>";
-                    }
-                ?>
-                
+<div class="container submenu_gallery shadow-lg">
+    <div class="row">
+        <div class="col-md-6">
+            <input type="email" oninput="buscador()" class="form-control list-group-item list-group-item-action" id="buscador_producto" placeholder="Introduce nombre del artículo">
+        </div>
+        <div class="col-md-3">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="btn_submenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filtrar por categorias
+                <span class="caret"></span>
+                </button>
+                    <ul class="dropdown-menu" aria-labelledby="Categorias">
+                        <?php
+                            foreach($listado_categorias as $categoria){
+                                echo "<li><a onclick='filtrar(this)' role='button'>".$categoria."</a></li>";
+                            }
+                        ?>
+                    </ul>
             </div>
         </div>
-    </div>
-    <div class="col-md-10 col-sm-12">
-        <div class="shadow-lg bg-more_grey" id="gallery"></div> <!-- #Container -->
+        <div class="col-md-3">
+            <button onclick='mostrarTodo()' type="button" class="btn btn-secondary" id="btn_submenu">Mostrar todo</button>
+        </div>
     </div>
 </div>
+
+
+<div class="container-fluid_basic">
+    <div class="shadow-lg bg-more_grey" id="gallery"></div>
+</div>
+
 
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

@@ -105,6 +105,15 @@ body {
     padding: 60px 50px;
   }
 
+  .container-fluid_alter{
+    padding: 4rem 10rem;
+    margin: 1.5rem;
+  }
+
+  .container-fluid_basic{
+    margin: 2rem;
+  }
+
   #list_articulo {
     padding-top: 2rem;
   }
@@ -492,8 +501,23 @@ body {
   }
 
   div#contenedor_galeria {
-    margin-top: 8rem;
+    margin-top: 4rem;
     margin-bottom: 4rem;
+  }
+
+  .container.submenu_gallery {
+    padding: 2rem;
+    margin-top: 5rem;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 1rem;
+  }
+  
+  button#btn_submenu {
+    padding: 1rem 4rem;
+    font-size: 2rem;
+    border: 1px solid;
+    width: -webkit-fill-available;
+    margin: 2px;
   }
 
   /* FOOTER */

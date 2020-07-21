@@ -3,9 +3,9 @@
   <div class="container text-center footer-container">
     <div class="row">
     
-      <!-- Columna 1 -->
+      <!-- Columna Informacion RGPD -->
       <div class="col-md-3 mb-md-0 mb-3">
-        <h5 class="text-uppercase">Informacion (Paginas RGPD)</h5>
+        <h5 class="text-uppercase">Informacion</h5>
 
         <ul class="list-unstyled">
           <li>
@@ -24,18 +24,18 @@
       </div>
       <!-- #Columna 1 -->
      
-      <!-- Columna 2 -->
+      <!-- Columna Paginas internas -->
       <div class="col-md-3 mb-md-0 mb-3">
         <h5 class="text-uppercase">Enlances de interes de la página</h5>
         <ul class="list-unstyled">
           <li>
-            <a class="footer_link" href="#!">Link 1</a>
+            <a class="footer_link" href="<?php echo get_home_url(); ?>/articulos/">Novedades</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Link 2</a>
+            <a class="footer_link" href="#!">Sobre nosotros</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Link 3</a>
+            <a class="footer_link" href="<?php echo get_home_url(); ?>/galeria/">Galeria</a>
           </li>
           <li>
             <a class="footer_link" href="#!">Link 4</a>
@@ -45,21 +45,21 @@
       </div>
       <!-- #Columna 2 -->
 
-      <!-- Columna 3 -->
+      <!-- Columna Acceso a redes sociales -->
       <div class="col-md-6 mt-md-0 mt-3">
         <h5 class="text-uppercase">Siguenos en redes sociales</h5>
         <ul class="list-unstyled">
           <li>
-            <a class="footer_link" href="#!">Link 1</a>
+            <a class="footer_link" href="#!">Facebook</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Link 2</a>
+            <a class="footer_link" href="#!">Link</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Link 3</a>
+            <a class="footer_link" href="#!">Link</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Link 4</a>
+            <a class="footer_link" href="#!">Link</a>
           </li>
         </ul>
       </div>

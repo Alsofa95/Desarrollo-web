@@ -34,6 +34,11 @@ body {
     src: url("assets/font/Margetha.otf") format("opentype");
   }
 
+  @font-face {
+    font-family: Sevillana;
+    src: url("assets/font/Sevillana-Regular.ttf");
+  }
+
   ::selection {
     color: rgb(255, 255, 255);
     background: rgb(80, 80, 80);
@@ -208,8 +213,8 @@ body {
   }
 
   .navbar-brand{
-      font-family: fuenteTitulo;
-      font-size: 25px;
+      font-family: Sevillana;
+      font-size: 3.5rem;
   }
 
   .navbar li a, .navbar .navbar-brand {

@@ -214,7 +214,8 @@ $listado_categorias = array_unique($listado_categorias);
         gallery.clear();
         for (var i = 0; i < items.length; i++) {
             console.log(items[i]);
-            if(items[i][0].title.includes(busqueda)){
+            let text = items[i][0].title.toUpperCase();
+            if(text.includes(busqueda.toUpperCase())){
                 gallery.addItems(items[i]);
             } 
         }

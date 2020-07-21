@@ -14,7 +14,7 @@ $categories="";
 
 <div class="content container">
    
-   <div class="row">
+   <div class="row" id="list_articulo">
 	   <div class="col-md-8 shadow-lg container_articulo">
 		   <?php
 				while ( have_posts() ) :

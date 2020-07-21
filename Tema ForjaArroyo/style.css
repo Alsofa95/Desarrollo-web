@@ -105,6 +105,10 @@ body {
     padding: 60px 50px;
   }
 
+  #list_articulo {
+    padding-top: 2rem;
+  }
+
   hr {
     border-top: 1px solid;
   }
@@ -132,7 +136,6 @@ body {
 
   .carousel-inner{
     height: 240px;
-
   }
 
   .item h4 {
@@ -362,8 +365,8 @@ body {
 
   /* Pagina articulos */
   .content.container {
-    margin-top: 5%;
-    margin-bottom: 15%;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
   }
 
   .blog-post {
@@ -398,6 +401,8 @@ body {
     padding-top: 3rem;
     margin-right: 2%;
     margin-left: 2%;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(202, 202, 202);
   }
   
   div#content_sidebar {

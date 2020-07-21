@@ -12,7 +12,7 @@ get_template_part( 'template-parts/content', 'header_generic' );
 ?>
 <div class="content container">
    
-    <div class="row">
+    <div class="row" id="list_articulo">
         <div class="col-md-8 shadow-lg container_articulo">
             <!-- <h2 class="text-center">- Entradas recientes -</h2> -->
             <?php

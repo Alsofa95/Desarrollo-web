@@ -247,6 +247,8 @@ body {
       -webkit-transform: translateY(0%);
     }
   }
+
+  /* ------- Tables y derivados -------- */
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
@@ -257,6 +259,9 @@ body {
       margin-bottom: 35px;
     }
   }
+
+
+  /* ----- Dispositivos moviles -------- */
   @media screen and (max-width: 480px) {
     .logo {
       font-size: 150px;
@@ -264,6 +269,10 @@ body {
 
     .jumbotron {
       padding: 10px 100px;
+    }
+
+    #list_articulo {
+      padding-top: 6rem;
     }
   }
 

@@ -9,6 +9,6 @@
         <a href="<?php echo esc_url( get_permalink()); ?>">
             <p><strong><?php the_title();?></strong></p>
         </a>
-        <p>Fecha de la entrada</p>
+        <p>  <?php echo the_time('j \d\e\ F, Y'); ?></p>
     </div>
 </div>

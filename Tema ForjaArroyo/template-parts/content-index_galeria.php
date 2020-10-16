@@ -24,31 +24,19 @@
     <h2>- Algunos Trabajos en Forja -</h2>
     <h4>Descubra la gran variedad de trabajos en forja artesanal que le ofrecemos</h4>
 
-  <?php 
-    foreach($imagenes as $imagen){
-      echo "<div class='mySlides'>";
-      echo "  <img class='shadow-lg' src='".$imagen."' style=width:75%>";
-      echo "</div>";
-    }
-  ?>
+    <div class="row">
 
-  <div class="caption-container">
-    <h2 id="caption"></h2>
-  </div>
+      <?php 
+        $contador = 1;
+        for($i=0; $i < $count ; $i++){
+          echo "<div class='col-xs-3 col-sm-3'>";
+          echo "  <img style='width:100% ' src='".$imagenes[$i]."' alt='".$nombres[$i]."'>";
+          echo "</div>";
+          $contador++;
+        }
+      ?>
 
-  <div class="row">
-
-    <?php 
-      $contador = 1;
-     for($i=0; $i < $count ; $i++){
-        echo "<div class='col-xs-4 col-sm-2'>";
-        echo "  <img class='demo cursor' src='".$imagenes[$i]."' style='width:100%' onclick='currentSlide(".$contador.")' alt='".$nombres[$i]."'>";
-        echo "</div>";
-        $contador++;
-      }
-    ?>
-
-  </div> 
+    </div> 
 
   <br>
   <a href="<?php echo get_home_url(); ?>/galeria/" class="button_anim" role="button" aria-pressed="true">Ver la galeria completa</a>

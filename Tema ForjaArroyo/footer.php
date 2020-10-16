@@ -53,10 +53,10 @@
             <a class="footer_link" href="#!">Facebook</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Link</a>
+            <a class="footer_link" href="#!">Instagram</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Link</a>
+            <a class="footer_link" href="#!">Google</a>
           </li>
           <li>
             <a class="footer_link" href="#!">Link</a>
@@ -72,7 +72,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© forjaarroyo.es | 2020 Copyright 
-    <a class="footer_link" href="#"> Daniel Moreno Aljaro</a>
+    <a class="footer_link" href="https://github.com/Alsofa95"> Daniel Moreno Aljaro</a>
   </div>
   <!-- Copyright -->
 </footer>

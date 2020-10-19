@@ -25,7 +25,7 @@ $categories="";
 				endwhile; // End the loop.
 		   ?>
 
-			<hr>
+			<hr class="hr-lg">
 		   <!-- Compartir del POST -->
 		   	<div class="container">
 			   <div class="fb-share-button" 
@@ -41,7 +41,7 @@ $categories="";
 				
 			</div>
 
-		   <hr>
+		   <hr class="hr-lg">
 		   <!-- Categorias del POST -->
 		   	<div class="row">
 				<div class="col-md-3"><h2>Categoria:  </h2></div>
@@ -58,7 +58,7 @@ $categories="";
 				</div>
 			</div>	
 
-		   <hr>
+		   <hr class="hr-lg">
 		   <!-- Relacionados del POST -->
 		   <h2>Artículos relacionados:</h2>
 	   </div>

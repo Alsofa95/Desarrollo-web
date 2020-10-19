@@ -17,9 +17,7 @@
           <li>
             <a class="footer_link" href="#!">Link 3</a>
           </li>
-          <li>
-            <a class="footer_link" href="#!">Link 4</a>
-          </li>
+
         </ul>
       </div>
       <!-- #Columna 1 -->
@@ -37,9 +35,7 @@
           <li>
             <a class="footer_link" href="<?php echo get_home_url(); ?>/galeria/">Galeria</a>
           </li>
-          <li>
-            <a class="footer_link" href="#!">Link 4</a>
-          </li>
+
         </ul>
 
       </div>
@@ -50,17 +46,15 @@
         <h5 class="text-uppercase">Siguenos en redes sociales</h5>
         <ul class="list-unstyled">
           <li>
-            <a class="footer_link" href="#!">Facebook</a>
+            <a class="footer_link" target="_blank" href="https://es-es.facebook.com/ForjaArroyo">Facebook</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Instagram</a>
+            <a class="footer_link" target="_blank" href="https://www.instagram.com/forjaarroyo/?hl=es">Instagram</a>
           </li>
           <li>
-            <a class="footer_link" href="#!">Google</a>
+            <a class="footer_link" target="_blank" href="https://www.google.com/maps/place/Forja+Arroyo/@37.602102,-4.7429707,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xb818f7342797d132!8m2!3d37.602102!4d-4.740782">Google</a>
           </li>
-          <li>
-            <a class="footer_link" href="#!">Link</a>
-          </li>
+
         </ul>
       </div>
       <!-- #Columna 3 -->

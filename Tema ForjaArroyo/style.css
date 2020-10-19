@@ -297,6 +297,7 @@ body {
 
   img {
     vertical-align: middle;
+    height: auto;
   }
   
   .container {
@@ -653,4 +654,8 @@ body {
 }
 .button_anim:hover:before {
   width: 100%;
+}
+
+hr.hr-lg{
+  width: 95%;
 }

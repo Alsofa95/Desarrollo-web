@@ -29,7 +29,7 @@
       <?php 
         $contador = 1;
         for($i=0; $i < $count ; $i++){
-          echo "<div class='col-xs-3 col-sm-3'>";
+          echo "<div class='col-xs-6 col-sm-3'>";
           echo "  <img style='width:100% ' src='".$imagenes[$i]."' alt='".$nombres[$i]."'>";
           echo "</div>";
           $contador++;

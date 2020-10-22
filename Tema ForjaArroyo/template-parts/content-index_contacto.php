@@ -20,8 +20,8 @@
             </div>
 
             <div class="col-sm-7">
-              <div class="row">
-                  <div class="col-sm-6 form-group">
+              <!-- <div class="row"> -->
+                  <!-- <div class="col-sm-6 form-group">
                   <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
                   </div>
                   <div class="col-sm-6 form-group">
@@ -30,7 +30,8 @@
               </div>
               <textarea class="form-control" id="comments" name="comments" placeholder="Comentario" rows="5"></textarea><br>  
 
-              <a href="#" class="btn btn-default pull-right" type="submit">Enviar consulta</a><br>
+              <a href="#" class="btn btn-default pull-right" type="submit">Enviar consulta</a><br> -->
+              <?php echo do_shortcode( '[contact-form-7 id="72" title="Formulario de contacto"]' ); ?>
             </div>
 
             <div class="col-sm-12 contact-map">

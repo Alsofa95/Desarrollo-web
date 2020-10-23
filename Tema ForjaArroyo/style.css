@@ -266,7 +266,7 @@ body {
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
-      margin: 25px 0;
+      /* margin: 25px 0; */
     }
     .btn-lg {
       width: 100%;
@@ -359,6 +359,10 @@ body {
     padding-bottom: 7rem;
     padding-top: 5rem;
   } 
+
+  .img-galleryPort{
+    padding: 0.8rem;
+  }
 
   div#content_opiniones {
     padding-bottom: 10rem;

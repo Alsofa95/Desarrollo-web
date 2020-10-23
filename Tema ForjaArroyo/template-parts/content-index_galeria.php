@@ -12,11 +12,7 @@
   $ID_Page = $page->ID;
 
   $imagenes = get_index_gallery_image_urls( $ID_Page);
-  $nombres = get_index_gallery_image_names( $ID_Page);
   $count = count($imagenes);
-
-  
-  
 ?>
 
 <br id="galeria">
@@ -29,8 +25,7 @@
       <?php 
         $contador = 1;
         for($i=0; $i < $count ; $i++){
-          echo "<div class='col-xs-12 col-sm-4 img-galleryPort'>";
-          echo "  <img style='width:100% ' src='".$imagenes[$i]."' alt='".$nombres[$i]."'>";
+          echo "<div class='col-xs-12 col-sm-4 img-galleryPort' style='background-image: url(".$imagenes[$i].");'>";
           echo "</div>";
           $contador++;
         }

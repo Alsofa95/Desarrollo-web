@@ -361,7 +361,10 @@ body {
   } 
 
   .img-galleryPort{
-    padding: 0.8rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 27rem;
+    border: 6px solid white;
   }
 
   div#content_opiniones {
